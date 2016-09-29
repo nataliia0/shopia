@@ -1,0 +1,17 @@
+{
+  "name": "experimentanium",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "normalize-css": "^4.2.0",
+    "photoswipe": "^4.1.1",
+    "font-awesome": "FortAwesome/Font-Awesome#^4.6.3"
+  },
+  "overrides": {
+    "jquery": {
+      "main": "dist/jquery.min.js"
+    }
+  },
+  "devDependencies": {
+    "font-awesome": "FortAwesome/Font-Awesome#^4.6.3"
+  }
+}
