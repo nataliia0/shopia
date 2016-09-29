@@ -100,7 +100,8 @@ gulp.task('style', function () {
 //SPRITES task
 gulp.task('sprites', function () {
     return gulp.src('src/svg/*.svg')
-        .pipe(svgSprite())
+        //.pipe(svgSprite())
+        //.pipe(newer(cms.nocms.svg))
         .pipe(gulp.dest(cms.nocms.svg));
 });
 
@@ -121,6 +122,7 @@ gulp.task('libs', function () {
         .pipe(newer(cms.nocms.libs))
         .pipe(gulp.dest(cms.nocms.libs))
 });
+
 //Fonts task
 gulp.task('fonts', function () {
     return gulp.src('src/fonts/**/*')
@@ -159,5 +161,5 @@ gulp.task('serve', function () {
 
 
 //GLOBAL TASKS
-gulp.task('build', gulp.series('clean', gulp.parallel('html', 'style', 'js', 'libs', 'fonts', 'img')));
+gulp.task('build', gulp.series('clean', gulp.parallel('html', 'style', 'js', 'libs', 'fonts', 'img', 'sprites')));
 gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'serve')));
