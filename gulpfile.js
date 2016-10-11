@@ -90,7 +90,10 @@ gulp.task('style', function () {
     return gulp.src('src/css/*.less')
         .pipe(gulpIf(isDevelopment, sourcemaps.init()))
         .pipe(less())
-        .pipe(postcss(processors))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulpIf(isDevelopment, sourcemaps.write()))
         .pipe(gulp.dest(cms.nocms.css))
         .pipe(gulp.dest('src/css/'))

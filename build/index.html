@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:400,700i" rel="stylesheet">
     <link rel="stylesheet" href="libs/normalize-css/normalize.css">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Shophia</title>
 </head>
 <body>
@@ -23,34 +23,58 @@
     </div>
     <div class="header__bottom">
         <nav class="header-menu">
-            <ul class="header-menu__list">
-                <li class="header-menu__item"><a href="#" class="header-menu__link">Home</a></li>
-                <li class="header-menu__item"><a href="#" class="header-menu__link">Gallery</a></li>
-                <li class="header-menu__item"><a href="#" class="header-menu__link">Categories</a></li>
-                <li class="header-menu__item"><a href="#" class="header-menu__link">Pages</a></li>
+            <ul class="header-menu-list">
+                <li class="header-menu-item"><a href="#" class="header-menu-item__link">Home</a></li>
+                <li class="header-menu-item"><a href="#" class="header-menu-item__link">Gallery</a></li>
+                <li class="header-menu-item"><a href="#" class="header-menu-item__link">Categories</a></li>
+                <li class="header-menu-item"><a href="#" class="header-menu-item__link">Pages</a></li>
             </ul>
         </nav>
         <div class="header-logo"><img src="svg/logo.svg" alt="Shophia" class="header-logo__image"></div>
         <div class="header-features">
-            <div class="header-features-social">
-                <a class="header-features-social__item"><i class="fa fa-facebook" aria-hidden="true"></i></a
-                ><a class="header-features-social__item"><i class="fa fa-twitter" aria-hidden="true"></i></a
-                ><a class="header-features-social__item"><i class="fa fa-pinterest" aria-hidden="true"></i></a
-                ><a class="header-features-social__item"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <div class="header-social">
+                <a class="header-social__item"><i class="fa fa-facebook" aria-hidden="true"></i></a
+                ><a class="header-social__item"><i class="fa fa-twitter" aria-hidden="true"></i></a
+                ><a class="header-social__item"><i class="fa fa-pinterest" aria-hidden="true"></i></a
+                ><a class="header-social__item"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             </div>
-            <div class="header-features-currency">Rupiah</div>
+            <div class="header-currency">
+                <span class="header-currency__active">Rupiah</span>
+                <!--<ul class="header-currency-list">
+                    <li class="header-currency__item">Rupiah</li>
+                    <li class="header-currency__item">Dollar</li>
+                    <li class="header-currency__item">Euro</li>
+                </ul>-->
+            </div>
         </div>
     </div>
     </header>
     <main class="main-content">
         <div class="slider__container">
             <ul class="slider__list">
-                <li class="slider-item slider-item--active">
+                <li class="slider-item">
                     <div class="slider-item__box">
-                        <div class="slider-item__border">
-                            <div class="slider-item__title">Mid-season</div>
-                            <div class="slider-item__type">sale</div>
-                            <div class="slider-item__separate">up to</div>
+                        <div class="slider-item__title">Mid-season</div>
+                        <div class="slider-item__type">sale</div>
+                        <div class="slider-item__discount">
+                            <div class="slider-item__separate">
+                                up to
+                                <span></span>
+                            </div>
+                            <div class="slider-item__text">50% OFF</div>
+                        </div>
+                    </div>
+                    <a href="#" class="slider-item__link">Shop now</a>
+                </li>
+                <li class="slider-item  slider-item--active">
+                    <div class="slider-item__box">
+                        <div class="slider-item__title">Mid-season</div>
+                        <div class="slider-item__type">sale</div>
+                        <div class="slider-item__discount">
+                            <div class="slider-item__separate">
+                                up to
+                                <span></span>
+                            </div>
                             <div class="slider-item__text">50% OFF</div>
                         </div>
                     </div>
@@ -60,26 +84,13 @@
                     <div class="slider-item__box">
                         <div class="slider-item__title">Mid-season</div>
                         <div class="slider-item__type">sale</div>
-                        <div class="slider-item__separate">up to</div>
-                        <div class="slider-item__text">50% OFF</div>
-                    </div>
-                    <a href="#" class="slider-item__link">Shop now</a>
-                </li>
-                <li class="slider-item">
-                    <div class="slider-item__box">
-                        <div class="slider-item__title">Mid-season</div>
-                        <div class="slider-item__type">sale</div>
-                        <div class="slider-item__separate">up to</div>
-                        <div class="slider-item__text">30% OFF</div>
-                    </div>
-                    <a href="#" class="slider-item__link">Shop now</a>
-                </li>
-                <li class="slider-item">
-                    <div class="slider-item__box">
-                        <div class="slider-item__title">Mid-season</div>
-                        <div class="slider-item__type">sale</div>
-                        <div class="slider-item__separate">up to</div>
-                        <div class="slider-item__text">60% OFF</div>
+                        <div class="slider-item__discount">
+                            <div class="slider-item__separate">
+                                up to
+                                <span></span>
+                            </div>
+                            <div class="slider-item__text">40% OFF</div>
+                        </div>
                     </div>
                     <a href="#" class="slider-item__link">Shop now</a>
                 </li>
@@ -105,76 +116,84 @@
                 <div class="features-item__text">Lifestyme Support</div>
             </div>
         </div>
-        <h2 class="section-header">HandPicked</h2>
+        <div class="section-title">
+            <h2 class="section-title__item">HandPicked</h2>
+        </div>
         <section class="promo">
             <div class="promo-block promo-block--small">
-                <img src="" alt="" class="promo-block__picture">
+                <img src="images/promo-1.jpg" alt="" class="promo-block__picture">
                 <a href="" class="promo-block__link"></a>
             </div>
             <div class="promo-block promo-block--small">
-                <img src="" alt="" class="promo-block__picture">
+                <img src="images/promo-2.jpg" alt="" class="promo-block__picture">
                 <a href="" class="promo-block__link"></a>
             </div>
             <div class="promo-block promo-block--long">
-                <img src="" alt="" class="promo-block__picture">
+                <img src="images/promo-3.jpg" alt="" class="promo-block__picture">
                 <a href="" class="promo-block__link"></a>
             </div>
             <div class="promo-block promo-block--small">
-                <img src="" alt="" class="promo-block__picture">
+                <img src="images/promo-4.jpg" alt="" class="promo-block__picture">
                 <a href="" class="promo-block__link"></a>
             </div>
             <div class="promo-block promo-block--small">
-                <img src="" alt="" class="promo-block__picture">
+                <img src="images/promo-5.jpg" alt="" class="promo-block__picture">
                 <a href="" class="promo-block__link"></a>
             </div>
         </section>
-        <h2 class="section-header">Summer Collection</h2>
+        <div class="section-title">
+            <h2 class="section-title__item">Summer Collection</h2>
+        </div>
         <section class="gallery">
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-1.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-2.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-3.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-4.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-5.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-6.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-7.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
             <div class="gallery-item">
-                <img src="" alt="" class="gallery-item__picture">
+                <img src="images/img-gallery-8.jpg" alt="" class="gallery-item__picture">
                 <span class="gallery-item__link">+add to cart</span>
             </div>
         </section>
-        <h2 class="section-header">Our Brand</h2>
+        <div class="section-title">
+            <h2 class="section-title__item">Our Brand</h2>
+        </div>
         <section class="brands">
             <div class="brands-item">
-                <img src="" alt="" class="brands-item__picture">
-                <img src="" alt="" class="brands-item__picture">
-                <img src="" alt="" class="brands-item__picture">
-                <img src="" alt="" class="brands-item__picture">
-                <img src="" alt="" class="brands-item__picture">
-                <img src="" alt="" class="brands-item__picture">
+                <img src="images/pic-brand-6.png" alt="" class="brands-item__picture">
+                <img src="images/pic-brand-5.png" alt="" class="brands-item__picture">
+                <img src="images/pic-brand-4.png" alt="" class="brands-item__picture">
+                <img src="images/pic-brand-3.png" alt="" class="brands-item__picture">
+                <img src="images/pic-brand-2.png" alt="" class="brands-item__picture">
+                <img src="images/pic-brand-1.png" alt="" class="brands-item__picture">
             </div>
         </section>
-        <h2 class="section-header">Customers Says</h2>
+        <div class="section-title">
+            <h2 class="section-title__item">Customers Says</h2>
+        </div>
     </main>
     <footer class="footer"></footer>
 </body>
